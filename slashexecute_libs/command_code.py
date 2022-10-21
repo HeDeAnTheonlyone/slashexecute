@@ -28,7 +28,7 @@ def createPackTemplate(args):
 
 # create new function
 def createNewFile(args):
-    path = "\\" + packName + "\data\\" + packName + "\\functions\\" + args[1] + ".mcfunction"
+    path = packName + "\data\\" + packName + "\\functions\\" + args[1] + ".mcfunction"
     funFile = open(path, "a")
     #TO DO: write code that writes code in the new file
     funFile.close()

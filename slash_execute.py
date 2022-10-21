@@ -15,5 +15,5 @@ for lines in file:
     args = getNewLine().split(" ")
 
     if (args[0] == "datapack"): command_code.createPackTemplate(args[1].strip("()").split(","))
-    #if (args[0] == "function"): command_conv.createNewFile(args)
+    if (args[0] == "func"): command_code.createNewFile(args)
 
