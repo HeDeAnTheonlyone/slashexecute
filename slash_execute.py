@@ -1,7 +1,7 @@
 
 import slashexecute_libs.command_code as command_code
 
-file = open("main.slashexe", "r")
+file = open("script.slashexe", "r")
 
 # get new code line
 def getNewLine():

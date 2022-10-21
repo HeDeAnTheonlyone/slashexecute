@@ -9,28 +9,24 @@ def createPackTemplate(args):
     
     os.makedirs(args[0] + "\data\\" + args[0] + "\\functions")
     os.makedirs(args[0] + "\data\minecraft\\tags\\functions")
-
     path = args[0] + "\data\minecraft\\tags\\functions"
 
     packMcMeta = open(args[0] + "\pack.mcmeta", "a")
-    packMcMetaJson = file_builder.PackMcMeta(args[1])
-    packMcMeta.write(packMcMetaJson.packMcMeta)
+    file_builder.PackMcMeta(args[1], packMcMeta)
     packMcMeta.close()
 
     if(eval(args[2].lower().capitalize())):
-        loadFun = open(path + "\load.json", "a")
-        loadFunJson = file_builder.FunTagJson(args[0], "load")
-        loadFun.write(loadFunJson.funTag)
-        loadFun.close()
+        funTag = open(path + "\load.json", "a")
+        file_builder.FunTagJson(args[0], "load", funTag)
+        funTag.close()
 
     if(eval(args[3].lower().capitalize())):
-        tickFun = open(path + "\\tick.json", "a")
-        tickFunJson = file_builder.FunTagJson(args[0], "tick")
-        tickFun.write(tickFunJson.funTag)
-        tickFun.close()
-    
+        funTag = open(path + "\\tick.json", "a")
+        file_builder.FunTagJson(args[0], "tick", funTag)
+        funTag.close()
 
-# create make new file
+
+# create new function
 def createNewFile(args):
     path = "\\" + packName + "\data\\" + packName + "\\functions\\" + args[1] + ".mcfunction"
     funFile = open(path, "a")
