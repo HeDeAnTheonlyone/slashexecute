@@ -4,6 +4,11 @@ import slashexecute_libs.file_builder as file_builder
 
 # create new data pack
 def createPackTemplate(args):
+
+    # check args
+    #if()
+
+    # set up pack
     global packName
     packName = args[0]
     
@@ -27,7 +32,7 @@ def createPackTemplate(args):
 
 
 # create new function
-def createNewFile(args):
+def createNewFuction(args):
     path = packName + "\data\\" + packName + "\\functions\\" + args[1] + ".mcfunction"
     funFile = open(path, "a")
     #TO DO: write code that writes code in the new file
